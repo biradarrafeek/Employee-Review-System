@@ -2,7 +2,6 @@ const Company = require('../models/company');
 const Feedback = require('../models/feedback');
 const User = require('../models/user');
 
-
 /**
  * take name, email, password, confirm passowrd, company name from request body
  * check if 
@@ -33,7 +32,6 @@ module.exports.createEmployee = async function (req, res) {
                 data: []
             });
         }
-
         const isUserPresent = await User.findOne({ 'email': email });
 
         if (isUserPresent) {
@@ -90,7 +88,6 @@ module.exports.createEmployee = async function (req, res) {
         });
     }
 }
-
 
 /**
  * create company action controller
